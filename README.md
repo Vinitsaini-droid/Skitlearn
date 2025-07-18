@@ -9,6 +9,7 @@ A machine learning library built from scratch, inspired by scikit-learn.
 ## 📊 Metrics Available
 
 - Mean Squared Error
+-Preprossesing (train_test_split, StandardScalar)
 
 ## 🔧 Installation
 
