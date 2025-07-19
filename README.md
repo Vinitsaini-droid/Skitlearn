@@ -1,19 +1,19 @@
-# skitlearn
+## 📘 Models Supported
 
-A machine learning library built from scratch, inspired by scikit-learn.
+- ✅ Linear Regression (Simple + Multiple)
+- ✅ Polynomial Regression (with custom degree)
+- 🚧 More coming soon: Logistic Regression, Decision Trees, etc.
 
-## 📦 Models Implemented
+## ✨ Example Usage
 
-- Linear Regression (closed-form)
+```python
+from skitlearn.models.polynomial_regression import PolynomialRegression
+import numpy as np
 
-## 📊 Metrics Available
+X = np.array([[1], [2], [3]])
+y = np.array([1, 4, 9])  # y = x^2
 
-- Mean Squared Error
--Preprossesing (train_test_split, StandardScalar)
-
-## 🔧 Installation
-
-This library is under active development. Clone the repo and run:
-
-```bash
-python main.py
+model = PolynomialRegression(degree=2)
+model.fit(X, y)
+preds = model.predict(X)
+print(preds)

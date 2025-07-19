@@ -21,3 +21,11 @@ class StandardScaler:
     def fit_transform(self, X):
         self.fit(X)
         return self.transform(X)
+
+def generate_polynomial_features(X, degree):
+    X = np.array(X)
+    X_poly = np.ones((X.shape[0], 1))
+    for power in range(1, degree + 1):
+        X_poly = np.c_[X_poly, X ** power]
+    return X_poly
+

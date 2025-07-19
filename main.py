@@ -1,21 +1,23 @@
-from models.linear_regression import LinearRegression
-from core.metrics import mean_squared_error
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import make_regression
+# skitlearn/__main__.py
 
-# Generate dummy data
-X, y = make_regression(n_samples=100, n_features=1, noise=10, random_state=42)
+from skitlearn.models.linear_regression import LinearRegression
+from skitlearn.models.polynomial_regression import PolynomialRegression
+from skitlearn.core.preprocessing import PolynomialFeatures
+import numpy as np
 
-# Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Example for Linear Regression
+print("===== Linear Regression Demo =====")
+X = np.array([[1], [2], [3], [4]])
+y = np.array([2, 4, 6, 8])
+lr = LinearRegression()
+lr.fit(X, y)
+print("Linear Predictions:", lr.predict(X))
 
-# Train model
-model = LinearRegression()
-model.fit(X_train, y_train)
+# Example for Polynomial Regression
+print("\n===== Polynomial Regression Demo =====")
+X_poly = np.array([[1], [2], [3], [4]])
+y_poly = np.array([1, 4, 9, 16])  # Quadratic relationship
 
-# Predict
-predictions = model.predict(X_test)
-
-# Evaluate
-mse = mean_squared_error(y_test, predictions)
-print(f"Mean Squared Error: {mse:.4f}")
+pr = PolynomialRegression(degree=2)
+pr.fit(X_poly, y_poly)
+print("Polynomial Predictions:", pr.predict(X_poly))
