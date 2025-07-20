@@ -1,10 +1,11 @@
 ## 📘 Models Supported
 
-- ✅ Linear Regression (Simple + Multiple)
-- ✅ Polynomial Regression (with custom degree)
-- 🚧 More coming soon: Logistic Regression, Decision Trees, etc.
+- Linear Regression (Simple + Multiple)
+- Polynomial Regression (with custom degree)
+- Logistic Regression (gradient descent)
+- 🚧 More coming soon: Decision Trees, etc.
 
-## ✨ Example Usage
+## ✨ Example Usage for Polynomial regression
 
 ```python
 from skitlearn.models.polynomial_regression import PolynomialRegression
