@@ -34,3 +34,9 @@ y_pred_log = logr.predict(X_log)
 print("Logistic Regression Probabilities:", y_pred_log_proba)
 print("Logistic Regression Predictions:", y_pred_log)
 print("Log Loss:", log_loss(y_log, y_pred_log_proba))
+
+# Dummy use case for Neural Network
+nn = NeuralNetwork(layer_sizes=[10, 16, 3], task='multiclass')
+nn.fit(X_train, y_train)  # y should be integer class labels
+y_pred = nn.predict(X_test)
+

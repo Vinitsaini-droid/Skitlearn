@@ -29,3 +29,10 @@ def generate_polynomial_features(X, degree):
         X_poly = np.c_[X_poly, X ** power]
     return X_poly
 
+def one_hot_encode(y, num_classes=None):
+    y = np.array(y)
+    if num_classes is None:
+        num_classes = np.max(y) + 1
+    return np.eye(num_classes)[y]
+
+

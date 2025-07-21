@@ -3,8 +3,9 @@
 - Linear Regression (Simple + Multiple)
 - Polynomial Regression (with custom degree)
 - Logistic Regression (gradient descent)
+- Basic Neural Network 
 - 🚧 More coming soon: Decision Trees, etc.
-
+Each model can be directly imported , each folder contains __init__.py file.
 ## ✨ Example Usage for Polynomial regression
 
 ```python
