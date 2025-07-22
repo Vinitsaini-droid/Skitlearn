@@ -4,7 +4,9 @@
 - Polynomial Regression (with custom degree)
 - Logistic Regression (gradient descent)
 - Basic Neural Network 
-- 🚧 More coming soon: Decision Trees, etc.
+- Decision tree classifier
+- Random Forest Clasiifier
+- 🚧 More coming soon: KNNs, SVM etc.
 Each model can be directly imported , each folder contains __init__.py file.
 ## ✨ Example Usage for Polynomial regression
 

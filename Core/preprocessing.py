@@ -35,4 +35,9 @@ def one_hot_encode(y, num_classes=None):
         num_classes = np.max(y) + 1
     return np.eye(num_classes)[y]
 
+def ensure_numeric(X):
+    if not np.issubdtype(X.dtype, np.number):
+        raise ValueError("Decision Trees require numeric input.")
+
+
 
