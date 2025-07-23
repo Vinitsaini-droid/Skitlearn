@@ -6,6 +6,7 @@ from models.decision_tree import DecisionTreeClassifier
 from models.random_forest import RandomForestClassifier
 from Core.metrics import accuracy, precision, recall, f1_score
 from Core.metrics import mean_squared_error, log_loss
+from models.knn import KNNClassifier
 import numpy as np
 
 # Dummy data for Linear Regression
@@ -76,3 +77,8 @@ print("Accuracy:", accuracy(y_test, rf_preds))
 print("Precision:", precision(y_test, rf_preds))
 print("Recall:", recall(y_test, rf_preds))
 print("F1 Score:", f1_score(y_test, rf_preds))
+
+print("\nKNNclassifier")
+knn = KNNClassifier(k=5)
+knn.fit(X_train, y_train)
+print("KNN Accuracy:", knn.score(X_test, y_test))

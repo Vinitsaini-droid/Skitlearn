@@ -6,7 +6,8 @@
 - Basic Neural Network 
 - Decision tree classifier
 - Random Forest Clasiifier
-- 🚧 More coming soon: KNNs, SVM etc.
+-KNN
+- 🚧 More coming soon!!
 Each model can be directly imported , each folder contains __init__.py file.
 ## ✨ Example Usage for Polynomial regression
 

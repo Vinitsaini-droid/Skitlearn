@@ -4,3 +4,4 @@ from .test_logistic_regression import test_logistic_regression
 from .test_neural_network import *
 from .test_decision_tree import test_decision_tree
 from .test_random_forest import test_random_forest
+from .test_knn import test_knn_classifier
