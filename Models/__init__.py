@@ -5,3 +5,4 @@ from .neural_network import NeuralNetwork
 from .decision_tree import  DecisionTreeClassifier, Node
 from .random_forest import RandomForestClassifier 
 from .knn import KNNClassifier
+from .pca import PCA

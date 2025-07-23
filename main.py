@@ -6,7 +6,10 @@ from models.decision_tree import DecisionTreeClassifier
 from models.random_forest import RandomForestClassifier
 from Core.metrics import accuracy, precision, recall, f1_score
 from Core.metrics import mean_squared_error, log_loss
+from sklearn.model_selection import train_test_split
 from models.knn import KNNClassifier
+from models.pca import PCA
+from sklearn.datasets import load_iris
 import numpy as np
 
 # Dummy data for Linear Regression
@@ -79,6 +82,18 @@ print("Recall:", recall(y_test, rf_preds))
 print("F1 Score:", f1_score(y_test, rf_preds))
 
 print("\nKNNclassifier")
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
 knn = KNNClassifier(k=5)
 knn.fit(X_train, y_train)
 print("KNN Accuracy:", knn.score(X_test, y_test))
+
+
+print("\nPCA")
+iris = load_iris()
+X = iris.data
+pca = PCA(n_components=2)
+X_reduced = pca.fit_transform(X)
+
+print("Original shape:", X.shape)
+print("Reduced shape:", X_reduced.shape)
