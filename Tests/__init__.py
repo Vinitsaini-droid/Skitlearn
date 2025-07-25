@@ -6,3 +6,4 @@ from .test_decision_tree import test_decision_tree
 from .test_random_forest import test_random_forest
 from .test_knn import test_knn_classifier
 from .test_pca import test_pca_fit_transform
+from .test_kmeans import test_kmeans_basic

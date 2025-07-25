@@ -50,3 +50,9 @@ def f1_score(y_true, y_pred):
 def euclidean_distance(a, b):
     return np.sqrt(np.sum((a - b) ** 2))
 
+
+def inertia(X, labels, centroids):
+    """
+    Sum of squared distances between each point and its assigned centroid.
+    """
+    return sum(np.linalg.norm(X[i] - centroids[labels[i]])**2 for i in range(len(X)))

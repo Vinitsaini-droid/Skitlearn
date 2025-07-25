@@ -8,7 +8,9 @@ from Core.metrics import accuracy, precision, recall, f1_score
 from Core.metrics import mean_squared_error, log_loss
 from sklearn.model_selection import train_test_split
 from models.knn import KNNClassifier
+from models import KMeans
 from models.pca import PCA
+from Core.metrics import inertia
 from sklearn.datasets import load_iris
 import numpy as np
 
@@ -94,6 +96,17 @@ iris = load_iris()
 X = iris.data
 pca = PCA(n_components=2)
 X_reduced = pca.fit_transform(X)
-
 print("Original shape:", X.shape)
 print("Reduced shape:", X_reduced.shape)
+
+
+# Simple 2D dataset
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [10, 2], [10, 4], [10, 0]])
+# Train KMeans
+model = KMeans(n_clusters=2, random_state=42)
+labels = model.fit_predict(X)
+print("Cluster labels:", labels)
+print("Centroids:\n", model.centroids)
+score = inertia(X, labels, model.centroids)
+print("Inertia:", score)

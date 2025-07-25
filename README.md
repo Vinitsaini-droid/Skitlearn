@@ -8,6 +8,7 @@
 - Random Forest Clasiifier
 - KNN
 - PCA
+- K means clustering
 - 🚧 More coming soon!!
 Each model can be directly imported , each folder contains __init__.py file.
 ## ✨ Example Usage for Polynomial regression
